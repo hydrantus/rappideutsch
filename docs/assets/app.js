@@ -1,4 +1,4 @@
-// Rappjdeutsch — minimal vanilla JS (no dependencies)
+// Rappideutsch — minimal vanilla JS (no dependencies)
 (function () {
   "use strict";
 

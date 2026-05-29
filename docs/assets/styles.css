@@ -1,5 +1,5 @@
 /* ============================================================
-   Rappjdeutsch — prototype stylesheet
+   Rappideutsch — prototype stylesheet
    All brand colours live in :root so they are easy to tweak
    while iterating on look & feel.
    ============================================================ */
@@ -485,7 +485,7 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   align-items: flex-start;
   margin-bottom: 2rem;
 }
-.footer-brand img { height: 60px; width: auto; filter: brightness(0) invert(1); opacity: .95; }
+.footer-brand img { height: 60px; width: auto; }
 .footer-brand p { margin: .8rem 0 0; max-width: 30ch; color: #8fb0cb; }
 .footer-cols { display: flex; gap: 3.5rem; flex-wrap: wrap; }
 .footer-cols h4 {

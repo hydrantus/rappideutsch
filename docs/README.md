@@ -1,6 +1,6 @@
-# Rappjdeutsch — website
+# Rappideutsch — website
 
-A simple, static website for **Rappjdeutsch**, a private German school in
+A simple, static website for **Rappideutsch**, a private German school in
 Rapperswil-Jona (teacher: Maria Bernardina Milano).
 
 No framework, no build step — just HTML, CSS and a few lines of vanilla
@@ -39,13 +39,15 @@ python3 -m http.server 8000
 3. **Source:** *Deploy from a branch*. **Branch:** `main`, **Folder:** `/docs`.
 4. Save. The site goes live at `https://<user>.github.io/<repo>/` in a minute.
 
-(For a custom domain like `rappjdeutsch.ch`, add it under Settings → Pages and
+(For a custom domain like `rappideutsch.ch`, add it under Settings → Pages and
 point a CNAME at GitHub.)
 
 ## ⚠️ Placeholders to confirm with Maria before going live
 
-- **Bio details** — highlighted in yellow on the page: years of experience and
-  which languages she speaks (`[X years]`, `[Italian, French, …]`).
+- **Bio — years of experience** — highlighted in yellow on the page (`[X years]`).
+  (Languages confirmed: German, Italian, English — already in the bio.)
+- **Email** — `info@rappideutsch.ch` is published as a contact option; confirm
+  the domain/mailbox is set up before going live.
 - **"First lesson free"** — used as the main call to action. Remove or adjust
   if that's not the offer.
 - **Address** — currently "to be confirmed" in Rapperswil-Jona.
