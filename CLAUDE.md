@@ -12,13 +12,10 @@ review and iterate on.
 Plain **HTML + CSS + a little vanilla JS**. No framework, no build step, no
 `package.json`, no bundler. Files are edited and served as-is.
 
-> **Brand spelling, in flux:** the brand is **Rappideutsch** (with an *i*). All
-> on-page text, alt/aria labels and the favicon now use the *i* form. Still on
-> the old **Rappjdeutsch** (*j*) spelling: the GitHub repo
-> (`hydrantus/rappjdeutsch`), this local directory, and therefore the live URL
-> `https://hydrantus.github.io/rappjdeutsch/` — a repo/directory rename to the
-> *i* form is pending. Because of this, the absolute `og:image` URL still points
-> at the `rappjdeutsch` repo path; **update it once the repo is renamed.**
+> **Brand spelling:** the brand is **Rappideutsch** (with an *i*). On-page text,
+> alt/aria labels, the favicon, the GitHub repo (`hydrantus/rappideutsch`) and
+> the live URL `https://hydrantus.github.io/rappideutsch/` all use the *i* form.
+> The only leftover *j* is this local directory name, which is cosmetic.
 
 ## Commands
 
@@ -42,10 +39,10 @@ There are no tests, linters, or CI.
 ## Deployment
 
 GitHub Pages, **Deploy from branch → `main` → `/docs`**. Live at
-`https://hydrantus.github.io/rappjdeutsch/`. `docs/.nojekyll` keeps Pages from
+`https://hydrantus.github.io/rappideutsch/`. `docs/.nojekyll` keeps Pages from
 mangling the files. Pushing to `main` redeploys; there is no build.
 
-Because the site is served under the `/rappjdeutsch/` sub-path, **all internal
+Because the site is served under the `/rappideutsch/` sub-path, **all internal
 references use relative paths** (see below). The one exception: `og:image` must
 be an **absolute** URL (`https://hydrantus.github.io/...`) or WhatsApp/social
 previews break — that was a deliberate fix, don't revert it to a relative path.
