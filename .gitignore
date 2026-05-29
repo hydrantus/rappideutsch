@@ -3,3 +3,7 @@
 __pycache__/
 *.pyc
 .env
+
+# Sublime Text editor files
+*.sublime-project
+*.sublime-workspace
