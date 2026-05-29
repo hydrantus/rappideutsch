@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rappjdeutsch">
+  <rect width="64" height="64" rx="14" fill="#173a5e"/>
+  <!-- mountains -->
+  <path d="M9 41 L24 17 L33 31 L40 22 L55 41 Z" fill="#ffffff"/>
+  <path d="M24 17 L29.5 25.5 L25 31 L19.5 24.5 Z" fill="#8fcde8"/>
+  <!-- lake -->
+  <path d="M8 43 q12 6 24 0 q12 -6 24 0 v6 q-12 6 -24 0 q-12 -6 -24 0 Z" fill="#8fcde8"/>
+</svg>
