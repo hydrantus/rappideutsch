@@ -14,17 +14,20 @@ docs/
 ├── index.html        ← English (default)
 ├── de/index.html     ← German
 ├── it/index.html     ← Italian
+├── fr/index.html     ← French
 ├── assets/
 │   ├── styles.css    ← all styling (brand colours live in :root at the top)
 │   ├── app.js        ← mobile menu + header shadow
 │   └── img/          ← optimised logo, teacher photo, class photos, favicon
+├── sitemap.xml       ← the four language pages, for search engines
+├── robots.txt        ← points at the sitemap
 └── .nojekyll         ← tells GitHub Pages to serve files as-is
 ```
 
 Each language is a self-contained, copy-translated page, so every text change
-has to be made in all three. To add French or Spanish later, copy `de/` to
-`fr/` / `es/`, translate the text, and add the language to the switcher in
-every page's header/footer.
+has to be made in all four. To add Spanish later, copy `de/` to `es/`,
+translate the text, and add the language to the switcher in every page's
+header/footer.
 
 ## Local preview
 
@@ -59,6 +62,16 @@ address redirect to the domain.
 
 The online lesson is CHF 15 / 60 min as a launch price **until 31 Dec 2026**,
 then CHF 19 / 60 min. On 1 Jan 2027 update the "Online" price card in
-`index.html`, `de/index.html` and `it/index.html`: change the price to CHF 19
-and delete the launch-price note.
+`index.html`, `de/index.html`, `it/index.html` and `fr/index.html`: change
+the price to CHF 19, delete the launch-price note, and in the JSON-LD block in
+each page's `<head>` change the online offer's `price` to 19 and remove its
+`priceValidUntil`.
+
+## Search visibility (outside the code)
+
+- Register https://rappideutsch.ch/ in Google Search Console and submit
+  `https://rappideutsch.ch/sitemap.xml`.
+- Create a Google Business Profile for Rappideutsch with the Neuhüsli-Park 12
+  address, phone and website — for a local school this brings more visitors
+  than any on-page change.
 ```

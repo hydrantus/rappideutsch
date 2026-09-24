@@ -10,3 +10,6 @@ __pycache__/
 
 # macOS AppleDouble metadata (from raw copies)
 ._*
+
+# Handover notes with credentials — never commit
+rappideutsch-handover.md
