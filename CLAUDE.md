@@ -20,11 +20,13 @@ Plain **HTML + CSS + a little vanilla JS**. No framework, no build step, no
 ## Commands
 
 ```bash
-# Local preview (open http://localhost:8000)
-cd docs && python3 -m http.server 8000
+# Local preview (open http://localhost:8000, or http://<this-box-LAN-IP>:8000
+# from another device — the --bind is what makes it reachable over the LAN)
+cd docs && python3 -m http.server 8000 --bind 0.0.0.0
 
 # Dump the course catalogue source spreadsheet to CSV
-# (auto-installs pandas + openpyxl into the active venv on first run)
+# (auto-installs pandas + openpyxl into the active venv on first run;
+#  create the venv first with `python3 -m venv .venv` if it doesn't exist)
 source .venv/bin/activate && python read_excel.py
 
 # Regenerate an optimised web image from a source original (macOS `sips`)
@@ -51,6 +53,20 @@ both on the domain root and on the github.io sub-path. The one exception:
 `og:image` must be an **absolute** URL (`https://rappideutsch.ch/...`) or
 WhatsApp/social previews break — that was a deliberate fix, don't revert it to
 a relative path.
+
+**Email** (`info@rappideutsch.ch`, published on the contact section): the free
+Infomaniak "Starter" mail service bundled with the domain. One real mailbox,
+`milano.bernardina@rappideutsch.ch`, with `info@` as an alias; everything
+forwards to Maria's Gmail, which also sends as both addresses through
+Infomaniak's SMTP (`mail.infomaniak.com:465`, mailbox login). MX/SPF/DKIM
+records were written by Infomaniak when the service was activated — don't
+touch them, and don't touch the A/CNAME records that point the site at GitHub.
+
+**Handover:** the plan is to hand the whole thing to Maria eventually (Infomaniak
+account + GitHub repo, or move the site into Infomaniak's free 10 MB Starter web
+space so GitHub drops out). Until then the Infomaniak API token in `.env` stays.
+Note that "connecting" the domain to Infomaniak web hosting in their manager
+rewrites the apex A records and would silently take the site off GitHub Pages.
 
 ## Architecture
 

@@ -32,22 +32,21 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Deploying to GitHub Pages
+## Deployment
 
-1. Push this repository to GitHub.
-2. Repo **Settings → Pages**.
-3. **Source:** *Deploy from a branch*. **Branch:** `main`, **Folder:** `/docs`.
-4. Save. The site goes live at `https://<user>.github.io/<repo>/` in a minute.
-
-(For a custom domain like `rappideutsch.ch`, add it under Settings → Pages and
-point a CNAME at GitHub.)
+The site is live at **https://rappideutsch.ch/** via GitHub Pages
+(Settings → Pages: *Deploy from a branch*, `main`, `/docs`). The `CNAME` file
+in this folder sets the custom domain; DNS for `rappideutsch.ch` is managed at
+Infomaniak and points at GitHub Pages. Pushing to `main` redeploys within a
+minute. `www.rappideutsch.ch` and the old `hydrantus.github.io/rappideutsch/`
+address redirect to the domain.
 
 ## ⚠️ Placeholders to confirm with Maria before going live
 
 - **Bio — years of experience** — highlighted in yellow on the page (`[X years]`).
   (Languages confirmed: German, Italian, English — already in the bio.)
-- **Email** — `info@rappideutsch.ch` is published as a contact option; confirm
-  the domain/mailbox is set up before going live.
+- ~~**Email**~~ — done: `info@rappideutsch.ch` is live and forwards to Maria's
+  Gmail, which can also reply from that address.
 - **"First lesson free"** — used as the main call to action. Remove or adjust
   if that's not the offer.
 - **Address** — currently "to be confirmed" in Rapperswil-Jona.
