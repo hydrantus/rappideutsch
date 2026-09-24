@@ -13,3 +13,6 @@ __pycache__/
 
 # Handover notes with credentials — never commit
 rappideutsch-handover.md
+
+# local scratch (screenshots etc.)
+tmp/
