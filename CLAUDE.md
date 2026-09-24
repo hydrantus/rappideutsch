@@ -14,7 +14,7 @@ Plain **HTML + CSS + a little vanilla JS**. No framework, no build step, no
 
 > **Brand spelling:** the brand is **Rappideutsch** (with an *i*). On-page text,
 > alt/aria labels, the favicon, the GitHub repo (`hydrantus/rappideutsch`) and
-> the live URL `https://hydrantus.github.io/rappideutsch/` all use the *i* form.
+> the live URL `https://rappideutsch.ch/` all use the *i* form.
 > The only leftover *j* is this local directory name, which is cosmetic.
 
 ## Commands
@@ -38,14 +38,19 @@ There are no tests, linters, or CI.
 
 ## Deployment
 
-GitHub Pages, **Deploy from branch → `main` → `/docs`**. Live at
-`https://hydrantus.github.io/rappideutsch/`. `docs/.nojekyll` keeps Pages from
-mangling the files. Pushing to `main` redeploys; there is no build.
+GitHub Pages, **Deploy from branch → `main` → `/docs`**, on the custom domain
+**`https://rappideutsch.ch/`** (`docs/CNAME`). DNS lives at Infomaniak
+(domain id 2208763; API token in the gitignored `.env`): four A records on the
+apex to GitHub Pages' IPs plus `www` → `hydrantus.github.io`. The old
+`https://hydrantus.github.io/rappideutsch/` redirects to the domain.
+`docs/.nojekyll` keeps Pages from mangling the files. Pushing to `main`
+redeploys; there is no build.
 
-Because the site is served under the `/rappideutsch/` sub-path, **all internal
-references use relative paths** (see below). The one exception: `og:image` must
-be an **absolute** URL (`https://hydrantus.github.io/...`) or WhatsApp/social
-previews break — that was a deliberate fix, don't revert it to a relative path.
+**All internal references use relative paths** (see below) so the site works
+both on the domain root and on the github.io sub-path. The one exception:
+`og:image` must be an **absolute** URL (`https://rappideutsch.ch/...`) or
+WhatsApp/social previews break — that was a deliberate fix, don't revert it to
+a relative path.
 
 ## Architecture
 
