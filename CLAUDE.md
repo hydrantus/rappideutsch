@@ -111,3 +111,7 @@ the variables. Headings use Poppins, body uses Inter (loaded from Google Fonts).
 (bio specifics, address, the "first lesson free" offer, class-photo consent,
 phone number). On-page placeholders are wrapped in `<span class="placeholder">`
 (highlighted yellow) — grep for that class to find them.
+
+**Dated content:** the online lesson price (`#prices` section, both pages) is a
+launch price valid until 31 Dec 2026 and must be changed to CHF 19 on 1 Jan
+2027 — see `docs/README.md`.

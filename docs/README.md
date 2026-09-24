@@ -43,14 +43,20 @@ address redirect to the domain.
 
 ## ⚠️ Placeholders to confirm with Maria before going live
 
-- **Bio — years of experience** — highlighted in yellow on the page (`[X years]`).
-  (Languages confirmed: German, Italian, English — already in the bio.)
+- ~~**Bio — years of experience**~~ — done: "over 20 years" / "über 20 Jahre"
+  (Maria confirmed). Languages confirmed too: German, Italian, English.
 - ~~**Email**~~ — done: `info@rappideutsch.ch` is live and forwards to Maria's
   Gmail, which can also reply from that address.
-- **"First lesson free"** — used as the main call to action. Remove or adjust
-  if that's not the offer.
-- **Address** — currently "to be confirmed" in Rapperswil-Jona.
-- **Class photos** — please confirm the students pictured are happy to appear
-  on a public website.
-- **Phone/WhatsApp** `+41 76 649 11 55` — confirm correct.
+- ~~**"First lesson free"**~~ — removed (Maria didn't want it). Replaced by a
+  **Prices** section; the call to action is now simply "get in touch".
+- ~~**Address**~~ — done: Bernardina Milano, Neuhüsli-Park 12, 8645 Rapperswil-Jona.
+- ~~**Class photos**~~ — confirmed.
+- ~~**Phone/WhatsApp**~~ `+41 76 649 11 55` — confirmed.
+
+## 🗓 Scheduled change: online price on 1 January 2027
+
+The online lesson is CHF 15 / 60 min as a launch price **until 31 Dec 2026**,
+then CHF 19 / 60 min. On 1 Jan 2027 update the "Online" price card in both
+`index.html` and `de/index.html`: change the price to CHF 19 and delete the
+launch-price note.
 ```

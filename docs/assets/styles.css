@@ -396,6 +396,25 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .course-card.featured .steps li { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18); color: #eaf2f9; }
 .course-card.featured .level-tag .star { color: #ffd24d; }
 
+/* ---------- Prices ---------- */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.price-card .price {
+  font-family: var(--font-head);
+  line-height: 1.1;
+  margin: .2rem 0 .7rem;
+}
+.price-card .price b { font-size: 2.2rem; font-weight: 700; color: var(--blue-dark); }
+.price-card .price span { font-size: .95rem; font-weight: 500; color: var(--ink-soft); }
+.price-card .price-note { font-size: .95rem; }
+.price-card.featured .price b { color: #fff; }
+.price-card.featured .price span { color: #c8dcec; }
+
 /* ---------- Why us ---------- */
 .feature-grid {
   display: grid;
