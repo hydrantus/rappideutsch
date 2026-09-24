@@ -80,6 +80,8 @@ docs/                 ← the published website (this is the Pages root)
 materials/            ← large SOURCE originals (NOT served): logos, teacher
                         photo, class photos, "Überblick web-site.xlsx" course
                         catalogue. Optimised copies are derived into docs/assets/img.
+  unused-drafts/      ← rejected/unused concepts (AI logo drafts etc.), kept
+                        for reference only; nothing here is used anywhere
 read_excel.py         ← reads the course catalogue xlsx → CSV
 ```
 
