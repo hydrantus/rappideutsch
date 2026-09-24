@@ -7,3 +7,6 @@ __pycache__/
 # Sublime Text editor files
 *.sublime-project
 *.sublime-workspace
+
+# macOS AppleDouble metadata (from raw copies)
+._*
