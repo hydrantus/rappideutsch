@@ -13,6 +13,7 @@ folder with any static web server.
 docs/
 ├── index.html        ← English (default)
 ├── de/index.html     ← German
+├── it/index.html     ← Italian
 ├── assets/
 │   ├── styles.css    ← all styling (brand colours live in :root at the top)
 │   ├── app.js        ← mobile menu + header shadow
@@ -20,9 +21,10 @@ docs/
 └── .nojekyll         ← tells GitHub Pages to serve files as-is
 ```
 
-Each language is a self-contained, copy-translated page. To add French,
-Italian or Spanish later, copy `de/` to `fr/` / `it/` / `es/`, translate the
-text, and add the language to the switcher in every page's header/footer.
+Each language is a self-contained, copy-translated page, so every text change
+has to be made in all three. To add French or Spanish later, copy `de/` to
+`fr/` / `es/`, translate the text, and add the language to the switcher in
+every page's header/footer.
 
 ## Local preview
 
@@ -56,7 +58,7 @@ address redirect to the domain.
 ## 🗓 Scheduled change: online price on 1 January 2027
 
 The online lesson is CHF 15 / 60 min as a launch price **until 31 Dec 2026**,
-then CHF 19 / 60 min. On 1 Jan 2027 update the "Online" price card in both
-`index.html` and `de/index.html`: change the price to CHF 19 and delete the
-launch-price note.
+then CHF 19 / 60 min. On 1 Jan 2027 update the "Online" price card in
+`index.html`, `de/index.html` and `it/index.html`: change the price to CHF 19
+and delete the launch-price note.
 ```
