@@ -79,6 +79,10 @@ touch them, and don't touch the A/CNAME records that point the site at GitHub.
 **Handover:** the plan is to hand the whole thing to Maria eventually (Infomaniak
 account + GitHub repo, or move the site into Infomaniak's free 10 MB Starter web
 space so GitHub drops out). Until then the Infomaniak API token in `.env` stays.
+`rappideutsch-handover.md` in the project root is Andrej's handover note for
+Maria and contains **plaintext account passwords**: it is gitignored, must
+never be committed, quoted, or copied anywhere, and its contents must not be
+read into a response. `tmp/` is a gitignored local scratch folder.
 Note that "connecting" the domain to Infomaniak web hosting in their manager
 rewrites the apex A records and would silently take the site off GitHub Pages.
 
@@ -126,12 +130,17 @@ the variables. Headings use Poppins, body uses Inter (loaded from Google Fonts).
 **Content source of truth:** course levels and descriptions come from
 `materials/Überblick web-site.xlsx` (run `read_excel.py` to read it).
 
-## Before-launch placeholders
+## Content status
 
-`docs/README.md` tracks the real-content items still to be confirmed with Maria
-(bio specifics, address, the "first lesson free" offer, class-photo consent,
-phone number). On-page placeholders are wrapped in `<span class="placeholder">`
-(highlighted yellow) — grep for that class to find them.
+All real-content items (experience, address, phone, class-photo consent,
+email) were confirmed by Maria on 2026-09-24; `docs/README.md` keeps the
+ticked-off list. **Maria does not want a "first lesson free" offer** — it was
+removed and replaced by the Prices section; don't reintroduce it. The Italian
+and French pages are Claude translations from the German page and have not
+yet been proof-read by a native speaker or by Maria.
+
+If a placeholder is ever needed again, wrap it in `<span class="placeholder">`
+(highlighted yellow) so it is easy to grep for.
 
 **Dated content:** the online lesson price (`#prices` section, all four pages) is a
 launch price valid until 31 Dec 2026 and must be changed to CHF 19 on 1 Jan
