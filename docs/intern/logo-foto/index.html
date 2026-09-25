@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Logo &amp; Foto – Feedback | Rappideutsch</title>
+
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <style>
+    .feedback-page { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+    .feedback-intro {
+      background: var(--sky-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .feedback-intro h1 { margin: 0 0 .6rem; font-size: 1.6rem; }
+    .feedback-intro p { margin: 0 0 .6rem; color: var(--ink-soft); }
+    .feedback-intro p:last-child { margin-bottom: 0; }
+    .feedback-section { margin-bottom: 3.5rem; }
+    .feedback-section h2 { font-size: 1.3rem; margin-bottom: .3rem; }
+    .feedback-section > p { color: var(--ink-soft); margin-bottom: 1.5rem; max-width: 60ch; }
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .feedback-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .feedback-card .thumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafcfd;
+      padding: 1.2rem;
+      min-height: 190px;
+    }
+    .feedback-card.is-photo .thumb { padding: 0; min-height: 0; }
+    .feedback-card img { max-width: 100%; max-height: 220px; display: block; }
+    .feedback-card.is-photo img { width: 100%; height: 260px; object-fit: cover; max-height: none; }
+    .feedback-card .label {
+      padding: .8rem 1rem;
+      border-top: 1px solid var(--line);
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+    }
+    .feedback-card .tag {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: .7rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      background: var(--sky-soft);
+      border-radius: 999px;
+      padding: .2rem .55rem;
+      white-space: nowrap;
+    }
+    .feedback-footer { color: var(--ink-soft); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main class="feedback-page">
+    <div class="feedback-intro">
+      <h1>Logo &amp; Foto – deine Meinung ist gefragt</h1>
+      <p>Diese Seite ist nur für Marias Kolleginnen und Kollegen gedacht — sie ist nirgends auf der öffentlichen Webseite verlinkt.</p>
+      <p>Unten seht ihr das aktuell verwendete Logo und Foto, daneben ein paar Varianten, die nicht auf der Webseite gelandet sind. Sagt Maria einfach direkt (WhatsApp, persönlich, etc.), was euch am besten gefällt — auch "die aktuelle Wahl ist top" ist eine hilfreiche Antwort.</p>
+    </div>
+
+    <section class="feedback-section">
+      <h2>Logo</h2>
+      <p>Vier weitere Konzepte, die beim Design ausprobiert, aber nicht verwendet wurden.</p>
+      <div class="feedback-grid">
+        <div class="feedback-card">
+          <div class="thumb"><img src="../../assets/img/logo.png" alt="Aktuelles Logo" /></div>
+          <div class="label">Aktuell <span class="tag">im Einsatz</span></div>
+        </div>
+        <div class="feedback-card">
+          <div class="thumb"><img src="../../assets/img/feedback/logo-1.jpg" alt="Logo-Konzept 1" /></div>
+          <div class="label">Konzept 1</div>
+        </div>
+        <div class="feedback-card">
+          <div class="thumb"><img src="../../assets/img/feedback/logo-2.jpg" alt="Logo-Konzept 2" /></div>
+          <div class="label">Konzept 2</div>
+        </div>
+        <div class="feedback-card">
+          <div class="thumb"><img src="../../assets/img/feedback/logo-3.jpg" alt="Logo-Konzept 3" /></div>
+          <div class="label">Konzept 3</div>
+        </div>
+        <div class="feedback-card">
+          <div class="thumb"><img src="../../assets/img/feedback/logo-4.jpg" alt="Logo-Konzept 4" /></div>
+          <div class="label">Konzept 4</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback-section">
+      <h2>Foto von Maria</h2>
+      <p>Drei neuere Fotos zur Auswahl, daneben das Foto, das aktuell auf der Webseite ist.</p>
+      <div class="feedback-grid">
+        <div class="feedback-card is-photo">
+          <div class="thumb"><img src="../../assets/img/teacher.webp" alt="Aktuelles Foto" /></div>
+          <div class="label">Aktuell <span class="tag">im Einsatz</span></div>
+        </div>
+        <div class="feedback-card is-photo">
+          <div class="thumb"><img src="../../assets/img/feedback/photo-a.jpg" alt="Foto A" /></div>
+          <div class="label">Foto A</div>
+        </div>
+        <div class="feedback-card is-photo">
+          <div class="thumb"><img src="../../assets/img/feedback/photo-b.jpg" alt="Foto B" /></div>
+          <div class="label">Foto B</div>
+        </div>
+        <div class="feedback-card is-photo">
+          <div class="thumb"><img src="../../assets/img/feedback/photo-c.jpg" alt="Foto C" /></div>
+          <div class="label">Foto C</div>
+        </div>
+      </div>
+    </section>
+
+    <p class="feedback-footer">— Danke fürs Mitdenken!</p>
+  </main>
+</body>
+</html>

@@ -98,6 +98,12 @@ docs/                 ← the published website (this is the Pages root)
   assets/app.js       ← mobile nav toggle + header shadow on scroll (that's it)
   assets/img/         ← optimised, web-sized assets actually served
   sitemap.xml, robots.txt
+  intern/             ← hidden pages, not linked from anywhere on the site
+                        and disallowed in robots.txt (still publicly
+                        reachable by direct URL — nothing here is secret).
+                        intern/logo-foto/ is a one-off feedback page for
+                        Maria's peers to compare logo/photo options; safe
+                        to delete once she's done collecting opinions.
 materials/            ← large SOURCE originals (NOT served): logos, teacher
                         photo, class photos, "Überblick web-site.xlsx" course
                         catalogue. Optimised copies are derived into docs/assets/img.
