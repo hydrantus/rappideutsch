@@ -146,3 +146,37 @@ If a placeholder is ever needed again, wrap it in `<span class="placeholder">`
 launch price valid until 31 Dec 2026 and must be changed to CHF 19 on 1 Jan
 2027 in the price card **and** in the JSON-LD offer (`priceValidUntil`) on all
 four pages — see `docs/README.md`.
+
+## Open task: make the logo more prominent (branch `logo-prominence`)
+
+**Status: work in progress, NOT approved, do not merge into `main`** (pushing
+`main` deploys the live site). Maria's feedback (2026-09-25): the logo is nice
+but barely visible on the site. Andrej's verdict on the first attempt: "quite
+ugly", so treat it as a starting point to rework, not to polish.
+
+What the first attempt did (all on the branch, all four language pages +
+`docs/assets/styles.css`):
+
+- Header: replaced the 46px stacked logo with a side-by-side lockup made from
+  two crops of the source PNG, `docs/assets/img/logo-mark.webp` (book icon) and
+  `docs/assets/img/logo-wordmark.webp` (the "Rappideutsch" wordmark), classes
+  `.brand-mark` / `.brand-word`. Under 600px only the icon shows.
+- Hero: the full `logo.png` (`.hero-logo`, ~270px wide) inserted above the
+  eyebrow and the H1 in `.hero-copy`.
+- Footer: `logo-dark.png` bumped from 60px to 104px tall.
+
+How to work on it (this is meant for a session on Andrej's MacBook, where the
+Claude in Chrome extension is available):
+
+1. `git checkout logo-prominence`, then start the preview server
+   (`cd docs && python3 -m http.server 8000 --bind 0.0.0.0`).
+2. Use Chrome (claude-in-chrome skill) to open `http://localhost:8000/`, take
+   screenshots at desktop (~1280px) and phone (~390px) widths, and look at the
+   header, hero and footer critically. Do the same for `/de/`.
+3. Redesign until it looks professional and the logo reads clearly, keeping
+   the site's overall look. Ideas not yet tried: a taller header with the
+   full stacked logo and a thinner nav; the logo as the hero visual's badge;
+   dropping the hero logo and only fixing the header; an SVG re-draw of the
+   wordmark. Keep changes identical across `en`/`de`/`it`/`fr`.
+4. Show Andrej screenshots before committing. Commit on the branch only; merge
+   to `main` only when he says so, then delete this section.
