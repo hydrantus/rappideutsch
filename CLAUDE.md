@@ -2,6 +2,14 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **Keep this file current.** It is the only handover document for a site with
+> no tests, no CI and no build step, so anything a future session would
+> otherwise have to rediscover belongs here. Update it in the *same* commit as
+> the change, not afterwards: a new or renamed asset and where it came from, a
+> decision Maria made, a non-obvious constraint, a changed command, a dated
+> item that will need revisiting. If a change makes a sentence here wrong,
+> rewrite that sentence rather than appending a newer note beside it.
+
 ## What this is
 
 Static marketing website for **Rappideutsch**, a private German school in
@@ -108,14 +116,19 @@ docs/                 ← the published website (this is the Pages root)
                         and disallowed in robots.txt (still publicly
                         reachable by direct URL — nothing here is secret).
                         intern/logo-foto/ is a one-off feedback page for
-                        Maria's peers to compare logo/photo options; safe
-                        to delete once she's done collecting opinions.
+                        Maria's peers to compare logo/photo options. She
+                        decided on 2026-09-26, so it now shows the winners
+                        tagged "neu im Einsatz" next to the runners-up and
+                        the outgoing pair; safe to delete whenever.
 materials/            ← large SOURCE originals (NOT served): logos, teacher
                         photo, class photos, "Überblick web-site.xlsx" course
                         catalogue. Optimised copies are derived into docs/assets/img.
   unused-drafts/      ← rejected/unused concepts (AI logo drafts etc.), kept
-                        for reference only; nothing here is used anywhere
+                        for reference only; nothing still in here is used.
+                        Promote a file up to materials/ if it ever gets
+                        picked (that is how the castle logo arrived).
 read_excel.py         ← reads the course catalogue xlsx → CSV
+serve.py              ← local preview server for docs/ (no-cache; see Commands)
 ```
 
 **Localization is by copy-translation, not a framework — this is intentional.**
