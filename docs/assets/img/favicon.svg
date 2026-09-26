@@ -1,8 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rappideutsch">
+  <defs>
+    <g id="castle">
+      <!-- curtain wall with crenellations -->
+      <path d="M9 32 H55 V49 a3 3 0 0 1 -3 3 H12 a3 3 0 0 1 -3 -3 Z"/>
+      <rect x="18" y="29.4" width="3" height="2.9"/>
+      <rect x="22.5" y="29.4" width="3" height="2.9"/>
+      <rect x="37.5" y="29.4" width="3" height="2.9"/>
+      <rect x="42.5" y="29.4" width="3" height="2.9"/>
+      <!-- towers -->
+      <rect x="9" y="26" width="8" height="6.5"/>
+      <path d="M13 18.6 L17.7 26.3 H8.3 Z"/>
+      <rect x="26" y="19" width="10.7" height="13.5"/>
+      <path d="M31.35 11.2 L38 19.4 H24.7 Z"/>
+      <rect x="47" y="26" width="8" height="6.5"/>
+      <path d="M51 18.6 L55.7 26.3 H46.3 Z"/>
+    </g>
+    <mask id="openings">
+      <rect width="64" height="64" fill="#fff"/>
+      <rect x="12" y="28.2" width="2.1" height="4.3" rx="1.05" fill="#000"/>
+      <rect x="30.25" y="22.6" width="2.3" height="4.6" rx="1.15" fill="#000"/>
+      <rect x="50" y="28.2" width="2.1" height="4.3" rx="1.05" fill="#000"/>
+      <circle cx="42.5" cy="52.4" r="3.4" fill="#000"/>
+    </mask>
+    <clipPath id="half-l"><rect x="0" y="0" width="32" height="64"/></clipPath>
+    <clipPath id="half-r"><rect x="32" y="0" width="32" height="64"/></clipPath>
+  </defs>
   <rect width="64" height="64" rx="14" fill="#173a5e"/>
-  <!-- mountains -->
-  <path d="M9 41 L24 17 L33 31 L40 22 L55 41 Z" fill="#ffffff"/>
-  <path d="M24 17 L29.5 25.5 L25 31 L19.5 24.5 Z" fill="#8fcde8"/>
-  <!-- lake -->
-  <path d="M8 43 q12 6 24 0 q12 -6 24 0 v6 q-12 6 -24 0 q-12 -6 -24 0 Z" fill="#8fcde8"/>
+  <g mask="url(#openings)">
+    <use href="#castle" clip-path="url(#half-l)" fill="#8fcde8"/>
+    <use href="#castle" clip-path="url(#half-r)" fill="#f07b19"/>
+  </g>
 </svg>

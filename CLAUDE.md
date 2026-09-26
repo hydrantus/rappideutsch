@@ -21,15 +21,21 @@ Plain **HTML + CSS + a little vanilla JS**. No framework, no build step, no
 
 ```bash
 # Local preview (open http://localhost:8000, or http://<this-box-LAN-IP>:8000
-# from another device — the --bind is what makes it reachable over the LAN)
-cd docs && python3 -m http.server 8000 --bind 0.0.0.0
+# from another device — it binds 0.0.0.0 so it is reachable over the LAN).
+# Use this rather than `python3 -m http.server`: plain http.server sends no
+# Cache-Control, so a reviewing browser can keep serving an old styles.css for
+# an entire session and every CSS change looks like it silently did nothing.
+python3 serve.py
 
 # Dump the course catalogue source spreadsheet to CSV
 # (auto-installs pandas + openpyxl into the active venv on first run;
 #  create the venv first with `python3 -m venv .venv` if it doesn't exist)
 source .venv/bin/activate && python read_excel.py
 
-# Regenerate an optimised web image from a source original (macOS `sips`)
+# Regenerate an optimised web image from a source original.
+# On Linux (no `sips`) use Pillow for all of the below, e.g.
+#   python3 -c "from PIL import Image; im=Image.open(SRC); im.resize(...).save(DST, quality=84)"
+# macOS `sips` recipes:
 #   - transparent PNGs (logo): keep alpha, cap width
 sips -s format png --resampleWidth 620 "materials/<source>.png" --out docs/assets/img/<name>.png
 #   - transparent cutouts that are large (teacher photo): WebP with alpha, ~10x smaller
@@ -140,7 +146,12 @@ the variables. Headings use Poppins, body uses Inter (loaded from Google Fonts).
 
 All real-content items (experience, address, phone, class-photo consent,
 email) were confirmed by Maria on 2026-09-24; `docs/README.md` keeps the
-ticked-off list. **Maria does not want a "first lesson free" offer** — it was
+ticked-off list. **The hero photo is now an opaque 3:4 shot of Maria at her
+desk** (`docs/assets/img/teacher.webp`, from `materials/20260926 Lehrerin -
+Arbeitszimmer.jpg`), not the old transparent cut-out — so `.hero-photo` is a
+rounded, shadowed frame and `.hero-blob` is the offset colour card behind it.
+Swapping in another photo means keeping the 3:4 ratio or adjusting both rules
+plus the `width`/`height` attributes on all four pages. **Maria does not want a "first lesson free" offer** — it was
 removed and replaced by the Prices section; don't reintroduce it. The Italian
 and French pages are Claude translations from the German page and have not
 yet been proof-read by a native speaker or by Maria.
@@ -153,11 +164,29 @@ launch price valid until 31 Dec 2026 and must be changed to CHF 19 on 1 Jan
 2027 in the price card **and** in the JSON-LD offer (`priceValidUntil`) on all
 four pages — see `docs/README.md`.
 
+**Logo change (2026-09-26):** Maria picked the castle/puzzle logo that was
+shown as "Konzept 3" on the internal feedback page. Its source original is
+`materials/20260926 Rappideutsch logo - Burg.png` (it was promoted out of
+`materials/unused-drafts/`). Everything under `docs/assets/img/` that carries
+the logo was regenerated from it: `logo.png`, `logo-mark.webp`,
+`logo-wordmark.webp`, `logo-dark.png`, `logo-og.jpg` and `favicon.svg` (now a
+hand-drawn castle, no longer the mountains-and-lake motif). The source has an
+off-white paper background, not transparency — the transparent copies were cut
+by keying out the paper colour and un-premultiplying the anti-aliased edges, so
+re-deriving them by naive thresholding will produce visible fringes. The logo's
+blue `#2d75a7` and orange `#f07b19` are now `--blue` and `--orange` in
+`:root`; the orange also replaced the Swiss red on the `.eyebrow .dot`.
+
 **Logo prominence (resolved 2026-09-25):** the header uses a side-by-side
 lockup made from two crops of the source PNG, `docs/assets/img/logo-mark.webp`
-(book icon) and `docs/assets/img/logo-wordmark.webp` (the "Rappideutsch"
+(castle mark) and `docs/assets/img/logo-wordmark.webp` (the "Rappideutsch"
 wordmark), classes `.brand-mark` / `.brand-word` — under 600px only the icon
-shows. The footer logo (`logo-dark.png`) is sized to fill the same vertical
+shows. **Both crops are trimmed tight to the artwork, with no transparent
+padding**, because `.brand` aligns them with `align-items: flex-end`: the
+wordmark's baseline is meant to land on the castle's base line, and the
+negative `margin-bottom` on `.brand-word` is exactly the depth of the "pp"
+descenders (18.65% of the wordmark's height) so they hang below it. Re-export
+either crop with padding and that alignment drifts. The footer logo (`logo-dark.png`) is sized to fill the same vertical
 space as the nav columns beside it (`.footer-brand img`, currently 200px
 tall), with no separate tagline paragraph since the logo already contains it.
 There is deliberately no logo in the hero — it was tried and dropped as
